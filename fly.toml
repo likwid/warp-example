@@ -1,0 +1,14 @@
+# fly.toml file generated for floral-thunder-8059 on 2022-08-26T14:55:34-05:00
+
+app = "floral-thunder-8059"
+
+[experimental]
+  cmd = "./warp-example"
+
+[[services]]
+  internal_port = 3030
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = "443"
